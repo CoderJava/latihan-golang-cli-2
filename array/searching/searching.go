@@ -64,7 +64,7 @@ func main() {
 	} */
 
 	// Binary searching
-	startIndex := 0
+	/* startIndex := 0
 	stopIndex := len(elements) - 1
 	centerIndexOld := -1
 	counterCenterIndexOld := 0
@@ -89,5 +89,15 @@ func main() {
 			}
 		}
 		centerIndexOld = centerIndex
+	} */
+
+	// Library binary search
+	sort.Ints(elements)
+	fmt.Println(elements)
+	indexSearched := sort.SearchInts(elements, inputAngkaDicari)
+	if indexSearched == len(elements) {
+		fmt.Print("Angka tidak ditemukan")
+	} else {
+		fmt.Printf("Angka ditemukan pada index ke-%d", indexSearched)
 	}
 }
